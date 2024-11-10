@@ -1,0 +1,12 @@
+r=1/2;
+n = 2;
+pe = 0.04;
+p = 1 - pe;
+
+gamma_1 = 2*(log(p)/log(2)) + 2*(1-r);
+gamma_2 = (log(pe*p)/log(2))+1;
+gamma_3 = 2*(log(pe)/log(2))+1;
+
+disp(gamma_1, 'branch meteric for correct reception');
+disp(gamma_2, 'branch meteric for any one correct reception');
+disp(gamma_3, 'branch meteric for no correct reception');

@@ -1,0 +1,11 @@
+clear;
+clc;
+P_S = 1;
+P_A = 0.2;
+P_B = 0.4;
+P_AUB = 0.5;
+P_AinterB = P_A + P_B - P_AUB;
+disp('Probability of both of A&B jointly occurs is '+string(P_AinterB))
+
+P_NOAB = P_S - P_AUB;
+disp('Probability of none of A or B are occur is '+string(P_NOAB))

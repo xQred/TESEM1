@@ -1,0 +1,29 @@
+Part 1:
+clear;
+clc;
+Po = 0:0.01:1;
+H_Po = zeros(1, length(Po));
+
+for i = 2:length(Po)-1
+    if Po(i) ~= 0 && Po(i) ~= 1 then
+        H_Po(i) = -Po(i) * (log(Po(i)) / log(2)) - (1 - Po(i)) * (log(1 - Po(i)) / log(2));
+    else
+        H_Po(i) = 0;
+    end
+end
+
+plot(Po, H_Po)
+xlabel("Symbol Probability, Po");
+ylabel("H(Po)");
+title("Entropy function H(Po)");
+
+
+Part 2:
+clear;
+clc;
+ylabel('H(Po)')
+title('entropy function H(Po)')
+plot2d3('gnn',0.5,1)
+
+
+

@@ -1,0 +1,14 @@
+clear;
+clc;
+
+D = poly(0,'D');
+g1D = 1 + D + D^2;
+g2D = 1 + D^2;
+mD = 1 + D^3 + D^4;
+x1D = g1D * mD;
+x2D = g2D * mD;
+
+x1 = coeff(x1D);
+x2 = coeff(x2D);
+disp(modulo(x1,2), 'top.dot.sequence');
+disp(modulo(x2,2), 'bottom.dot.sequence');
