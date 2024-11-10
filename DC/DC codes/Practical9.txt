@@ -1,0 +1,30 @@
+clear;
+close;
+clc;
+
+M = 4;
+a = 1;
+T = 1;
+S = [(-3/2)*a*sqrt(T), (-1/2)*a*sqrt(T), (3/2)*a*sqrt(T), (1/2)*a*sqrt(T)];
+
+
+x_grid = linspace(-2, 2, 9);
+y_grid = linspace(-0.5, 0.5, 5);
+for x = x_grid
+    plot2d([x x], [-0.5 0.5], style = 3); 
+end
+for y = y_grid
+    plot2d([-2 2], [y y], style = 3); 
+end
+
+
+plot2d(S, [0,0,0,0], -10, "000");
+xlabel("phi1(t)");
+title("M-ary QAM Signal Constellation");
+
+disp("M-ary QAM Representation of Transmitted Symbols");
+disp("Location of message points: " + S);
+disp("Transmitted symbol    00    |    01    |    11    |    10");
+disp("Received symbol       00    |    01    |    11    |    10");
+disp("Decision intervals for received symbols");
+disp("Interval on phi1(t): x < -a*sqrt(T) | -a*sqrt(T) < x < 0 | 0 < x < a*sqrt(T) | x > a*sqrt(T)");
