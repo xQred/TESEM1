@@ -12,8 +12,8 @@ void main()
 	while(1)
 	{
 		P0=0xFF;
-		delay(25);
+		delay(100);
 		P0=0x00;
-		delay(25);
+		delay(100);
 	}
 }
